@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "imports": 
+   [
+    {
+     "column_mappings" : {
+        "C_ID" : "C_ID", 
+        "C_NAME" : "C_Name", 
+        "C_ADDRESS" : "C_Address"
+     }, 
+     "import_settings" : {
+        "import_columns" : [ 
+           "C_ID", 
+           "C_NAME",
+           "C_ADDRESS"
+        ]
+     },
+     "source_data" : { 
+       "data_type" : "CSV", 
+       "file_name" : "Customers.csv", 
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": false,
+       "dialect"   : "HANA",  
+       "type_config" : { 
+          "delimiter" : ";" 
+        } 
+      }, 
+     "target_table" : "MY_SHOP_CUSTOMERS"  
+    },
+    {
+     "column_mappings" : {
+        "V_ID" : "V_ID", 
+        "V_NAME" : "V_Name"
+     }, 
+     "import_settings" : {
+        "import_columns" : [ 
+           "V_ID", 
+           "V_NAME"
+        ]
+     },
+     "source_data" : { 
+       "data_type" : "CSV", 
+       "file_name" : "Vendors.csv", 
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": false,
+       "dialect"   : "HANA",  
+       "type_config" : { 
+          "delimiter" : ";" 
+        } 
+      }, 
+     "target_table" : "MY_SHOP_VENDORS"  
+    },
+    {
+     "column_mappings" : {
+        "P_ID" : "P_ID", 
+        "P_NAME" : "P_Name", 
+        "P_VENDOR_V_ID": "P_Vendor_V_ID",
+        "P_EAN" : "P_EAN",
+        "P_PRICE" : "P_Price",
+        "P_UNITSINSTOCK" : "P_UnitsInStock"
+     }, 
+     "import_settings" : {
+        "import_columns" : [ 
+            "P_ID",
+            "P_NAME",
+            "P_VENDOR_V_ID",
+            "P_EAN",
+            "P_PRICE",
+            "P_UNITSINSTOCK"
+        ]
+     },
+     "source_data" : { 
+       "data_type" : "CSV", 
+       "file_name" : "Products.csv", 
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": false,
+       "dialect"   : "HANA",  
+       "type_config" : { 
+          "delimiter" : ";" 
+        } 
+      }, 
+     "target_table" : "MY_SHOP_PRODUCTS"  
+    },
+    {
+     "column_mappings" : {
+        "O_ID" : "O_ID", 
+        "O_CUSTOMER_C_ID" : "O_Customer_C_ID"
+     }, 
+     "import_settings" : {
+        "import_columns" : [ 
+            "O_ID",
+            "O_CUSTOMER_C_ID"
+        ]
+     },
+     "source_data" : { 
+       "data_type" : "CSV", 
+       "file_name" : "Orders.csv", 
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": false,
+       "dialect"   : "HANA",  
+       "type_config" : { 
+          "delimiter" : ";" 
+        } 
+      }, 
+     "target_table" : "MY_SHOP_ORDERS"
+    },
+    {
+     "column_mappings" : {
+        "OI_ORDER_O_ID" : "OI_Order_O_ID", 
+        "OI_QUANTITY" : "OI_Quantity",
+        "OI_PRODUCT_P_ID" : "OI_Product_P_ID"
+     }, 
+     "import_settings" : {
+        "import_columns" : [ 
+            "OI_ORDER_O_ID",
+            "OI_QUANTITY",
+            "OI_PRODUCT_P_ID"
+        ]
+     },
+     "source_data" : { 
+       "data_type" : "CSV", 
+       "file_name" : "OrderItems.csv", 
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": false,
+       "dialect"   : "HANA",  
+       "type_config" : { 
+          "delimiter" : ";" 
+        } 
+      }, 
+     "target_table" : "MY_SHOP_ORDERITEMS"  
+    }
+   ] 
+}

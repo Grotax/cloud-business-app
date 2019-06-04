@@ -1,0 +1,8 @@
+P_ID;P_Name;P_Vendor_V_ID;P_EAN;P_Price;P_UnitsInStock
+1;racingbike 1;1;1,5456644554;200.00;20
+2;cheap smartphone;2;78954546546;60.00;200
+3;water 0,5 L;3;5,54535E+11;0.30;20000
+4;apples 1 KG;3;12124254343;2.00;200
+5;notebook 2000;2;21252424654;1000.00;30
+6;nice smartphone;2;5456644554;500.00;40
+7;mountainbike 4;1;54654365434;300.00;10
